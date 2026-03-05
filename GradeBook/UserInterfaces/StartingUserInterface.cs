@@ -1,4 +1,5 @@
-﻿using GradeBook.GradeBooks;
+﻿using GradeBook.Enums;
+using GradeBook.GradeBooks;
 using System;
 
 namespace GradeBook.UserInterfaces
@@ -40,7 +41,7 @@ namespace GradeBook.UserInterfaces
                 return;
             }
             var name = parts[1];
-            BaseGradeBook gradeBook = new BaseGradeBook(name);
+            BaseGradeBook gradeBook = new BaseGradeBook(name, GradeBookType.Standard);
             Console.WriteLine("Created gradebook {0}.", name);
             GradeBookUserInterface.CommandLoop(gradeBook);
         }
